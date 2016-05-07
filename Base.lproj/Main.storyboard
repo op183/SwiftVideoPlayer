@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Lca-kQ-q4k">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Swift Video Player-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftVideoPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ON-XR-CDk">
+                                <rect key="frame" x="20" y="79" width="72" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Play Video"/>
+                                <connections>
+                                    <action selector="playVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vux-pH-0ZF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnC-mA-zpo">
+                                <rect key="frame" x="20" y="124" width="146" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Play Encrypted Video"/>
+                                <connections>
+                                    <action selector="playEncryptedVideo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D8z-Fh-IoW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wui-wh-Ad4">
+                                <rect key="frame" x="20" y="169" width="53" height="30"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" link="YES"/>
+                                </accessibility>
+                                <state key="normal" title="Encrypt"/>
+                                <connections>
+                                    <action selector="encrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QaU-8L-jz8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" text="CONSOLE OUTPUT" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lb-jM-P9p">
+                                <rect key="frame" x="20" y="214" width="440" height="266"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XnC-mA-zpo" firstAttribute="leading" secondItem="3ON-XR-CDk" secondAttribute="leading" id="5jA-eT-x4h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7Lb-jM-P9p" secondAttribute="bottom" id="7sY-25-U9p"/>
+                            <constraint firstItem="3ON-XR-CDk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="15" id="ITM-ZV-ghT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Lb-jM-P9p" secondAttribute="trailing" id="RUl-2S-za5"/>
+                            <constraint firstItem="XnC-mA-zpo" firstAttribute="top" secondItem="3ON-XR-CDk" secondAttribute="bottom" constant="15" id="WVB-nd-PWY"/>
+                            <constraint firstItem="wui-wh-Ad4" firstAttribute="leading" secondItem="3ON-XR-CDk" secondAttribute="leading" id="b48-3U-pQr"/>
+                            <constraint firstItem="3ON-XR-CDk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c0g-xT-LvN"/>
+                            <constraint firstItem="wui-wh-Ad4" firstAttribute="top" secondItem="XnC-mA-zpo" secondAttribute="bottom" constant="15" id="gGo-bI-cMy"/>
+                            <constraint firstItem="7Lb-jM-P9p" firstAttribute="top" secondItem="wui-wh-Ad4" secondAttribute="bottom" constant="15" id="nMl-UE-spv"/>
+                            <constraint firstItem="7Lb-jM-P9p" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zdP-jZ-bCS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Swift Video Player" id="1s0-DT-pRO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="480" height="480"/>
+                    <connections>
+                        <outlet property="log" destination="7Lb-jM-P9p" id="x12-Tt-4ji"/>
+                        <outlet property="playEncryptedButton" destination="XnC-mA-zpo" id="5OB-oO-cNB"/>
+                        <segue destination="FUg-0n-JfR" kind="show" identifier="seguePlayVideo" id="0ca-uM-xmM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1345" y="143"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="pdY-dM-Fm7">
+            <objects>
+                <avPlayerViewController definesPresentationContext="YES" modalPresentationStyle="overCurrentContext" videoGravity="AVLayerVideoGravityResizeAspect" id="FUg-0n-JfR" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </avPlayerViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxA-Ar-rXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1936" y="143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LPT-Xe-963">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lca-kQ-q4k" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qnf-95-ub3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ahG-0K-eDl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="71p-mD-Wb4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="143"/>
+        </scene>
+    </scenes>
+</document>
